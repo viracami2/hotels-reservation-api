@@ -3,3 +3,12 @@
 ################################################################################
 
 /Hotel-Reservations/.vs/Hotel-Reservations/v15/Server/sqlite3/db.lock
+/Common/HotelReservation.Core/bin/Debug/netcoreapp2.1
+/Common/HotelReservation.Core/obj
+/.vs
+/Common/HotelReservation.Database/bin/Debug/netcoreapp2.1
+/Common/HotelReservation.Database/obj
+/Common/HotelReservation.Domain/bin/Debug/netcoreapp2.1
+/Common/HotelReservation.Domain/obj
+/Hotel-Reservations/bin/Debug/netcoreapp2.1
+/Hotel-Reservations/obj
