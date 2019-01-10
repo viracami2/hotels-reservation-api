@@ -5,7 +5,7 @@ using System.Text;
 
 namespace HotelReservation.Core.Repository.Interface
 {
-    public interface IUserRepository
+    internal interface IUserRepository
     {
         List<User> GetUsers();
     }
