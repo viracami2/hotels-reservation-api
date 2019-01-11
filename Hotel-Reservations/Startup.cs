@@ -42,6 +42,11 @@ namespace Hotel_Reservations
 
             app.UseHttpsRedirection();
             app.UseMvc();
+
+            //para usar los archivos staticos "wwwroot"
+            app.UseDefaultFiles();
+            app.UseStaticFiles();
+
         }
     }
 }
