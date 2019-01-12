@@ -5,12 +5,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Service\Response\" />
     <Folder Include="Service\Request\" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\HotelReservation.Domain\HotelReservation.Domain.csproj" />
+    <PackageReference Include="Insight.Database.Providers.Default" Version="6.2.8" />
   </ItemGroup>
 
 </Project>
