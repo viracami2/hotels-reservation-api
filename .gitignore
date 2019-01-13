@@ -28,3 +28,4 @@
 /HotelReservation.Test/bin/Debug/netcoreapp2.1/HotelReservation.Database.pdb
 /HotelReservation.Test/bin/Debug/netcoreapp2.1/HotelReservation.Database.dll
 /HotelReservation.Test/bin/Debug/netcoreapp2.1
+/Common/HotelReservation.SQLServer/HotelReservation.SQLServer.dbmdl

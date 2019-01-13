@@ -19,9 +19,7 @@ namespace HotelReservation.Database.Service
             => Connection().Query<Users_ListResponse>("SELECT Username, Password FROM HR.Users", null, CommandType.Text);
 
         public IList<Users_ListResponse> UserGet(string mail)
-            => Connection().Query<Users_ListResponse>("GetUser", null , CommandType.StoredProcedure);
-
-
+            => Connection().Query<Users_ListResponse>("dbo.GetUser", new { mail = mail });
         #endregion
     }
 }

@@ -39,9 +39,11 @@ namespace HotelReservation.Core.Repository
         {
             var result = _DatabaseService.UserGet(user.Email);
 
-          
-
-            return new Response { code = 2, Content = $"{result.Email}" };
+            return new Response
+            {
+                code = 2,
+                Content = $"{result.FirstOrDefault()?.Email}"
+            };
         }
     }
 }
