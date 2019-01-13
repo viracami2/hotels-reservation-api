@@ -2,6 +2,7 @@
 using HotelReservation.Core.Repository.Service.Response;
 using HotelReservation.Database.Service;
 using HotelReservation.Domain.Model;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -42,7 +43,7 @@ namespace HotelReservation.Core.Repository
             return new Response
             {
                 code = 2,
-                Content = $"{result.FirstOrDefault()?.Email}"
+                Content = JsonConvert.SerializeObject(result)
             };
         }
     }

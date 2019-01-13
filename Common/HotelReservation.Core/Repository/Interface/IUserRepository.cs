@@ -9,6 +9,6 @@ namespace HotelReservation.Core.Repository.Interface
     internal interface IUserRepository
     {
         List<User> GetUsers();
-        Response   PostUser(User user);
+        Response PostUser(User user);
     }
 }
