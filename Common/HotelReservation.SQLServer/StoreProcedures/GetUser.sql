@@ -1,6 +1,7 @@
 ﻿CREATE PROCEDURE GetUser
-	@mail nvarchar(30)
+	@Mail nvarchar(30) = NULL
 AS
 BEGIN
-	SELECT * FROM HR.Users where Mail = @mail
+	SELECT * FROM HR.Users 
+	WHERE Mail = @Mail
 END

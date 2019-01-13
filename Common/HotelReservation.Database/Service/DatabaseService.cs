@@ -4,6 +4,7 @@ using Insight.Database;
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Linq;
 using System.Text;
 
 namespace HotelReservation.Database.Service
@@ -16,10 +17,10 @@ namespace HotelReservation.Database.Service
 
         #region Users
         public IEnumerable<Users_ListResponse> Users_List()
-            => Connection().Query<Users_ListResponse>("SELECT Username, Password FROM HR.Users", null, CommandType.Text);
+            => Connection().Query<Users_ListResponse>(sql: "SELECT Username, Password FROM HR.Users", commandType: CommandType.Text);
 
-        public IList<Users_ListResponse> UserGet(string mail)
-            => Connection().Query<Users_ListResponse>("dbo.GetUser", new { mail = mail });
+        public Users_ListResponse UserGet(string mail)
+            => Connection().Query<Users_ListResponse>(sql: "GetUser", parameters: new { mail }).FirstOrDefault();
         #endregion
     }
 }

@@ -10,6 +10,11 @@ namespace HotelReservation.Database.Base
 {
     public class DBBase
     {
+        public DBBase()
+        {
+            SqlInsightDbProvider.RegisterProvider();
+        }
+
         public SqlConnection Connection()
         {
             var connection = new SqlConnection(DatabaseConfig.ConnectionString.Database);

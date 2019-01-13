@@ -13,8 +13,7 @@ namespace Tests
         {
             DatabaseService service = new DatabaseService();
             var result = service.Users_List();
-
-            Assert.Pass();
+            TestContext.WriteLine(result);
         }
 
         [Category("Users")]
@@ -24,7 +23,6 @@ namespace Tests
             DatabaseService service = new DatabaseService();
             var result = service.UserGet("correo1@yopmail.com");
             TestContext.WriteLine(result);
-            Assert.Pass();
         }
     }
 }

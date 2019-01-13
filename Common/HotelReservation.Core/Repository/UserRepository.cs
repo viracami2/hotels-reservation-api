@@ -43,7 +43,7 @@ namespace HotelReservation.Core.Repository
             return new Response
             {
                 code = 2,
-                Content = JsonConvert.SerializeObject(result.FirstOrDefault())
+                Content = JsonConvert.SerializeObject(result)
             };
         }
     }
