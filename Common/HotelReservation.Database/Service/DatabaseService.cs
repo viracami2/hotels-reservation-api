@@ -17,6 +17,11 @@ namespace HotelReservation.Database.Service
         #region Users
         public IEnumerable<Users_ListResponse> Users_List()
             => Connection().Query<Users_ListResponse>("SELECT Username, Password FROM HR.Users", null, CommandType.Text);
+
+        public IList<Users_ListResponse> UserGet(string mail)
+            => Connection().Query<Users_ListResponse>("GetUser", null , CommandType.StoredProcedure);
+
+
         #endregion
     }
 }

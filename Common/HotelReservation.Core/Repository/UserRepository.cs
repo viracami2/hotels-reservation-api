@@ -1,4 +1,5 @@
 ﻿using HotelReservation.Core.Repository.Interface;
+using HotelReservation.Core.Repository.Service.Response;
 using HotelReservation.Database.Service;
 using HotelReservation.Domain.Model;
 using System;
@@ -32,6 +33,15 @@ namespace HotelReservation.Core.Repository
                 Celular = user.Celular,
                 Telefono = user.Telefono
             }).ToList();
+        }
+
+        public Response PostUser(User user)
+        {
+            var result = _DatabaseService.UserGet(user.Email);
+
+          
+
+            return new Response { code = 2, Content = $"{result.Email}" };
         }
     }
 }

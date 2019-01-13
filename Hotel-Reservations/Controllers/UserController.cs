@@ -23,5 +23,11 @@ namespace Hotel_Reservations.Controllers
         {
             return this._UserService.GetUsers();
         }
+
+        [HttpPost]
+        public IEnumerable<HotelReservation.Domain.Model.User> Post()
+        {
+            return this._UserService.GetUsers();
+        }
     }
 }

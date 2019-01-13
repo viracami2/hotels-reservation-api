@@ -67,4 +67,7 @@
     <None Include="Shema\HR.sql" />
     <None Include="Tables\HR.Users.sql" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="StoreProcedures\GetUser.sql" />
+  </ItemGroup>
 </Project>
