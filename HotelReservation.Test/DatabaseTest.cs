@@ -7,7 +7,6 @@ namespace Tests
     [TestFixture]
     public class DatabaseTest
     {
-        
         [Category("Users")]
         [TestCase(TestName = "GetAllUsers")]
         public void Test1()
@@ -27,6 +26,5 @@ namespace Tests
             TestContext.WriteLine(result);
             Assert.Pass();
         }
-
     }
 }
