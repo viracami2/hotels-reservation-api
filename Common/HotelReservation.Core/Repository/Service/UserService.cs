@@ -24,6 +24,5 @@ namespace HotelReservation.Core.Repository.Service
         {
             return this._UserRepository.PostUser(user);
         }
-
     }
 }
