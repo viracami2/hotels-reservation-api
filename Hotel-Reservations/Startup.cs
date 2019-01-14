@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using HotelReservation.Core.Utils;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -31,14 +32,17 @@ namespace Hotel_Reservations
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
-                app.UseDeveloperExceptionPage();
             if (env.IsDevelopment())
             {
+                //app.UseDeveloperExceptionPage();                
             }
             else
             {
                 app.UseHsts();
             }
+
+            app.UseMiddleware<CustomExceptionMiddleware>();
+
 
             app.UseHttpsRedirection();
             app.UseMvc();
@@ -48,5 +52,6 @@ namespace Hotel_Reservations
             app.UseStaticFiles();
 
         }
+        
     }
 }

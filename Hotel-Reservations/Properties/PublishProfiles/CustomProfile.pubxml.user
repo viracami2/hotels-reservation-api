@@ -8,4 +8,60 @@ edite el archivo MSBuild. Visite https://go.microsoft.com/fwlink/?LinkID=208121 
     <TimeStampOfAssociatedLegacyPublishXmlFile />
     <_PublishTargetUrl>C:\inetpub\api-hotel</_PublishTargetUrl>
   </PropertyGroup>
+  <ItemGroup>
+    <File Include="appsettings.Development.json">
+      <publishTime>01/10/2019 08:50:04</publishTime>
+    </File>
+    <File Include="appsettings.json">
+      <publishTime>01/10/2019 08:50:04</publishTime>
+    </File>
+    <File Include="Hotel-Reservations.deps.json">
+      <publishTime>01/14/2019 13:33:40</publishTime>
+    </File>
+    <File Include="Hotel-Reservations.dll">
+      <publishTime>01/14/2019 13:33:38</publishTime>
+    </File>
+    <File Include="Hotel-Reservations.pdb">
+      <publishTime>01/14/2019 13:33:38</publishTime>
+    </File>
+    <File Include="Hotel-Reservations.runtimeconfig.json">
+      <publishTime>01/14/2019 13:33:40</publishTime>
+    </File>
+    <File Include="HotelReservation.Core.dll">
+      <publishTime>01/14/2019 13:33:38</publishTime>
+    </File>
+    <File Include="HotelReservation.Core.pdb">
+      <publishTime>01/14/2019 13:33:38</publishTime>
+    </File>
+    <File Include="HotelReservation.Database.dll">
+      <publishTime>01/14/2019 09:56:07</publishTime>
+    </File>
+    <File Include="HotelReservation.Database.pdb">
+      <publishTime>01/14/2019 09:56:07</publishTime>
+    </File>
+    <File Include="HotelReservation.Domain.dll">
+      <publishTime>01/14/2019 13:33:37</publishTime>
+    </File>
+    <File Include="HotelReservation.Domain.pdb">
+      <publishTime>01/14/2019 13:33:37</publishTime>
+    </File>
+    <File Include="Insight.Database.Core.dll">
+      <publishTime>11/24/2018 20:36:48</publishTime>
+    </File>
+    <File Include="Insight.Database.Providers.Default.dll">
+      <publishTime>11/24/2018 20:36:52</publishTime>
+    </File>
+    <File Include="Newtonsoft.Json.dll">
+      <publishTime>11/27/2018 18:07:34</publishTime>
+    </File>
+    <File Include="web.config">
+      <publishTime>01/14/2019 13:33:40</publishTime>
+    </File>
+    <File Include="wwwroot/images/iisstart.png">
+      <publishTime>01/11/2019 18:57:07</publishTime>
+    </File>
+    <File Include="wwwroot/index.html">
+      <publishTime>01/11/2019 18:57:07</publishTime>
+    </File>
+  </ItemGroup>
 </Project>

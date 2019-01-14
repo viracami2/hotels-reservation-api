@@ -11,7 +11,7 @@ namespace HotelReservation.Database.Service.Response
         public string FirstName { get; set; }
         public string SecondName { get; set; }
         public string LastName { get; set; }
-        public string Email { get; set; }
+        public string Mail { get; set; }
         public string Telefono { get; set; }
         public string Celular { get; set; }
     }

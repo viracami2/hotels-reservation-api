@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using HotelReservation.Core.Repository.Service;
+using HotelReservation.Core.Repository.Service.Response;
+using HotelReservation.Domain.Model;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Hotel_Reservations.Controllers
@@ -25,9 +27,9 @@ namespace Hotel_Reservations.Controllers
         }
 
         [HttpPost]
-        public IEnumerable<HotelReservation.Domain.Model.User> Post()
+        public Response  Post(User u )
         {
-            return this._UserService.GetUsers();
+            return this._UserService.PostUser(u);
         }
     }
 }

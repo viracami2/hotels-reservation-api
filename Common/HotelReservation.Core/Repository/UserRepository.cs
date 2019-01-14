@@ -1,11 +1,13 @@
 ﻿using HotelReservation.Core.Repository.Interface;
 using HotelReservation.Core.Repository.Service.Response;
+using HotelReservation.Core.Utils;
 using HotelReservation.Database.Service;
 using HotelReservation.Domain.Model;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Text;
 
 namespace HotelReservation.Core.Repository
@@ -30,7 +32,7 @@ namespace HotelReservation.Core.Repository
                 FirstName = user.FirstName,
                 SecondName = user.SecondName,
                 LastName = user.LastName,
-                Email = user.Email,
+                Email = user.Mail,
                 Celular = user.Celular,
                 Telefono = user.Telefono
             }).ToList();
@@ -38,13 +40,26 @@ namespace HotelReservation.Core.Repository
 
         public Response PostUser(User user)
         {
-            var result = _DatabaseService.UserGet(user.Email);
 
-            return new Response
+            try
             {
-                code = 2,
-                Content = JsonConvert.SerializeObject(result)
-            };
+                var result = _DatabaseService.UserGet(user.Email);
+
+                if (!string.IsNullOrEmpty(result.Mail)) throw new NullReferenceException($"[{nameof(PostUser)}] {HRConstants.ExistUser}");
+
+                return new Response
+                {
+                    code = 2,
+                    Content = JsonConvert.SerializeObject(result)
+                };
+            }
+            catch (Exception e)
+            {
+                
+                throw new HttpStatusCodeException(HttpStatusCode.BadRequest,e);
+                
+            }
+
         }
     }
 }
