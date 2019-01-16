@@ -28,10 +28,24 @@ namespace HotelReservation.Core.Utils
             {
                 await HandleExceptionAsync(context, ex);
             }
+            catch (NullReferenceException ex)
+            {
+                await HandleNullReferenceException(context, ex);
+            }
             catch (Exception exceptionObj)
             {
                 await HandleExceptionAsync(context, exceptionObj);
             }
+        }
+
+        private Task HandleNullReferenceException(HttpContext context, NullReferenceException ex)
+        {
+            string result = null;
+            result = new ErrorDetails() { Message = ex.Message, StatusCode = 500,HRTrace= ex.StackTrace }.ToString();
+            context.Response.HttpContext.Response.StatusCode = 500;
+            context.Response.ContentType = "application/json";
+            
+            return context.Response.WriteAsync(result);
         }
 
         private Task HandleExceptionAsync(HttpContext context, HttpStatusCodeException exception)

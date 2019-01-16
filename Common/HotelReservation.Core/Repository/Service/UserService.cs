@@ -20,6 +20,11 @@ namespace HotelReservation.Core.Repository.Service
             return this._UserRepository.GetUsers();
         }
 
+        public User GetUser(string mail)
+        {
+            return this._UserRepository.GetUser(mail);
+        }
+
         public Response.Response PostUser(User user)
         {
             return this._UserRepository.PostUser(user);

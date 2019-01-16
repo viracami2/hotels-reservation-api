@@ -41,6 +41,7 @@ namespace Hotel_Reservations
                 app.UseHsts();
             }
 
+
             app.UseMiddleware<CustomExceptionMiddleware>();
 
 

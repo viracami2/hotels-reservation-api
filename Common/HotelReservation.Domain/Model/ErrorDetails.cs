@@ -11,6 +11,7 @@ namespace HotelReservation.Domain.Model
     {
         public int StatusCode { get; set; }
         public string Message { get; set; }
+        public string HRTrace{ get; set; }
 
         public override string ToString()
         {

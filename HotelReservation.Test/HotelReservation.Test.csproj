@@ -15,6 +15,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Common\HotelReservation.Database\HotelReservation.Database.csproj" />
+    <ProjectReference Include="..\Common\HotelReservation.Domain\HotelReservation.Domain.csproj" />
   </ItemGroup>
 
 </Project>

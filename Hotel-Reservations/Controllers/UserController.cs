@@ -21,9 +21,16 @@ namespace Hotel_Reservations.Controllers
         }
 
         [HttpGet]
-        public IEnumerable<HotelReservation.Domain.Model.User> Get()
+        public IEnumerable<User> Get()
         {
             return this._UserService.GetUsers();
+        }
+
+        
+        [HttpGet("{mail}")]
+        public User Get(string mail)
+        {
+            return this._UserService.GetUser(mail);
         }
 
         [HttpPost]

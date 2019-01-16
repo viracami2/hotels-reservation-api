@@ -5,7 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
-using System.Text;
+
 
 namespace HotelReservation.Database.Service
 {
@@ -21,6 +21,9 @@ namespace HotelReservation.Database.Service
 
         public Users_ListResponse UserGet(string mail)
             => Connection().Query<Users_ListResponse>(sql: "GetUser", parameters: new { mail }).FirstOrDefault();
+
+        public object UserPost(Users_ListResponse usuario)
+        => Connection().Query<dynamic>(sql: "PostUser", parameters: usuario).FirstOrDefault();
         #endregion
     }
 }

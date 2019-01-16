@@ -3,10 +3,11 @@
 ################################################################################
 
 /Hotel-Reservations/.vs/Hotel-Reservations/v15/Server/sqlite3/db.lock
-/Common/HotelReservation.Core/bin/Debug/netcoreapp2.1
+*./Common/HotelReservation.Core/bin/Debug/netcoreapp2.1
 /Common/HotelReservation.Core/obj
 /.vs
 /Common/HotelReservation.Database/bin/Debug/netcoreapp2.1
+*./Common/HotelReservation.Database/bin/
 /Common/HotelReservation.Database/obj
 /Common/HotelReservation.Domain/bin/Debug/netcoreapp2.1
 /Common/HotelReservation.Domain/obj
@@ -15,6 +16,7 @@
 /Common/HotelReservation.SQLServer/obj/Debug
 /Common/HotelReservation.SQLServer/bin/Debug
 /HotelReservation.Test/obj
+*./HotelReservation.Test/bin/
 /HotelReservation.Test/bin/Debug/netcoreapp2.1/nunit_random_seed.tmp
 /HotelReservation.Test/bin/Debug/netcoreapp2.1/NUnit3.TestAdapter.pdb
 /HotelReservation.Test/bin/Debug/netcoreapp2.1/NUnit3.TestAdapter.dll
@@ -25,7 +27,8 @@
 /HotelReservation.Test/bin/Debug/netcoreapp2.1/HotelReservation.Test.pdb
 /HotelReservation.Test/bin/Debug/netcoreapp2.1/HotelReservation.Test.dll
 /HotelReservation.Test/bin/Debug/netcoreapp2.1/HotelReservation.Test.deps.json
-/HotelReservation.Test/bin/Debug/netcoreapp2.1/HotelReservation.Database.pdb
-/HotelReservation.Test/bin/Debug/netcoreapp2.1/HotelReservation.Database.dll
+*./HotelReservation.Test/bin/Debug/netcoreapp2.1/HotelReservation.Database.pdb
+*./HotelReservation.Test/bin/Debug/netcoreapp2.1/HotelReservation.Database.dll
 /HotelReservation.Test/bin/Debug/netcoreapp2.1
 /Common/HotelReservation.SQLServer/HotelReservation.SQLServer.dbmdl
+*.jfm

@@ -26,6 +26,8 @@ namespace HotelReservation.Core.Utils
 
         public HttpStatusCodeException(HttpStatusCode statusCode, Exception inner) : this(statusCode, inner.ToString()) { }
 
+        public HttpStatusCodeException(HttpStatusCode statusCode, NullReferenceException inner) : this(statusCode, inner.ToString()) { this.StatusCode = statusCode; }
+
         public HttpStatusCodeException(HttpStatusCode statusCode, JObject errorObject) : this(statusCode, errorObject.ToString())
         {
             this.ContentType = @"application/json";
