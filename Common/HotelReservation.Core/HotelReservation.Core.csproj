@@ -9,10 +9,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Newtonsoft.Json" Version="12.0.1" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\HotelReservation.Database\HotelReservation.Database.csproj" />
     <ProjectReference Include="..\HotelReservation.Domain\HotelReservation.Domain.csproj" />
   </ItemGroup>

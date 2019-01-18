@@ -9,7 +9,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Insight.Database.Providers.Default" Version="6.2.8" />
+    <ProjectReference Include="..\..\HotelReservationLIB\HotelReservation.LIB.csproj" />
   </ItemGroup>
 
 </Project>
