@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace HotelReservation.Database.Service.Response
+﻿namespace HotelReservation.Database.Service.Response
 {
     public class Users_ListResponse
     {

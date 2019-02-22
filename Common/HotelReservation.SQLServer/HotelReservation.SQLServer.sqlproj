@@ -73,4 +73,10 @@
   <ItemGroup>
     <None Include="StoreProcedures\PostUser.sql" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="StoreProcedures\GetHotel.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Tables\HR.Hotels.sql" />
+  </ItemGroup>
 </Project>

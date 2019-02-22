@@ -25,5 +25,14 @@ namespace HotelReservation.Database.Service
         public object UserPost(Users_ListResponse usuario)
         => Connection().Query<dynamic>(sql: "PostUser", parameters: usuario).FirstOrDefault();
         #endregion
+
+
+
+        #region Hoteles
+
+        public Hotel_ListResponse HotelGet(string id)
+            => Connection().Query<Hotel_ListResponse>(sql: "GetHotel", parameters: new { id }).FirstOrDefault();
+
+        #endregion
     }
 }

@@ -8,6 +8,12 @@ namespace Tests
     [TestFixture]
     public class DatabaseTest
     {
+        //DatabaseService service;
+        DatabaseTest()
+        {
+            DatabaseService service = new DatabaseService();
+        }
+
         [Category("Users")]
         [TestCase(TestName = "Should_Get_All_User")]
         public void Test1()
@@ -31,8 +37,20 @@ namespace Tests
         public void Test3()
         {
             DatabaseService service = new DatabaseService();
-            var usuario = new Users_ListResponse() {Username="Victor",Mail= "victor2@yopmaUNIQUEIDE.com", Password="abc123$$" };
+            var usuario = new Users_ListResponse() {Username="Victor",Mail= "victor2@yopUNIQUEIDE.com", Password="abc123$$" };
             var result = service.UserPost(usuario);            
+        }
+
+
+        [Category("Hotels")]
+        [TestCase(TestName = nameof(Should_Get_Hotel))]
+        public void Should_Get_Hotel()
+        {
+                DatabaseService _service = new DatabaseService();
+
+            _service.HotelGet("123");
+            TestContext.WriteLine("??");
+
         }
     }
 }
