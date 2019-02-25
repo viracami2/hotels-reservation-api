@@ -1,7 +1,7 @@
-﻿CREATE PROCEDURE GetHotel
+﻿ALTER PROCEDURE GetHotel
 	@Id NVARCHAR(30) = NULL
 AS
 BEGIN
-	SELECT * FROM HR.Hotel 
-	WHERE Id = @Id
+	SELECT * FROM HR.Hotels 
+	WHERE NumberIdentification = @Id
 END

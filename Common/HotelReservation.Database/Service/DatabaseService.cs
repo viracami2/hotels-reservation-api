@@ -16,13 +16,13 @@ namespace HotelReservation.Database.Service
         }
 
         #region Users
-        public IEnumerable<Users_ListResponse> Users_List()
-            => Connection().Query<Users_ListResponse>(sql: "SELECT * FROM HR.Users", commandType: CommandType.Text);
+        public IEnumerable<Users_Response> Users_List()
+            => Connection().Query<Users_Response>(sql: "SELECT * FROM HR.Users", commandType: CommandType.Text);
 
-        public Users_ListResponse UserGet(string mail)
-            => Connection().Query<Users_ListResponse>(sql: "GetUser", parameters: new { mail }).FirstOrDefault();
+        public Users_Response UserGet(string mail)
+            => Connection().Query<Users_Response>(sql: "GetUser", parameters: new { mail }).FirstOrDefault();
 
-        public object UserPost(Users_ListResponse usuario)
+        public object UserPost(Users_Response usuario)
         => Connection().Query<dynamic>(sql: "PostUser", parameters: usuario).FirstOrDefault();
         #endregion
 
@@ -30,9 +30,11 @@ namespace HotelReservation.Database.Service
 
         #region Hoteles
 
-        public Hotel_ListResponse HotelGet(string id)
-            => Connection().Query<Hotel_ListResponse>(sql: "GetHotel", parameters: new { id }).FirstOrDefault();
+        public Hotel_Response HotelGet(string id)
+            => Connection().Query<Hotel_Response>(sql: "GetHotel", parameters: new { id }).FirstOrDefault();
 
+        public object HotelPost(Hotel_Response hotel )
+            => Connection().Query<Hotel_Response>(sql:"PostHotel",parameters: hotel);
         #endregion
     }
 }

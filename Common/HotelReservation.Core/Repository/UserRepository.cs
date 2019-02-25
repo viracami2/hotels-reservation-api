@@ -55,7 +55,7 @@ namespace HotelReservation.Core.Repository
                 
                 if (!string.IsNullOrEmpty(result?.Mail)) throw new NullReferenceException($"[{nameof(PostUser)}] {HRConstants.ExistUser}");
 
-                var _user= JsonConvert.DeserializeObject<Users_ListResponse>(JsonConvert.SerializeObject(user));
+                var _user= JsonConvert.DeserializeObject<Users_Response>(JsonConvert.SerializeObject(user));
                 var resultt = _DatabaseService.UserPost(_user);
 
                 return new Response

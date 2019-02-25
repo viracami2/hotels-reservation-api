@@ -79,4 +79,7 @@
   <ItemGroup>
     <None Include="Tables\HR.Hotels.sql" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="StoreProcedures\PostHotel.sql" />
+  </ItemGroup>
 </Project>

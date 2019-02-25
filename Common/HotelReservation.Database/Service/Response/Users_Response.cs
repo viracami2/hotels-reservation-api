@@ -1,6 +1,6 @@
 ﻿namespace HotelReservation.Database.Service.Response
 {
-    public class Users_ListResponse
+    public class Users_Response
     {
         public string Username { get; set; }
         public string Password { get; set; }

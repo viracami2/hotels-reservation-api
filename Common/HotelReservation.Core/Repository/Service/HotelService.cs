@@ -1,10 +1,29 @@
-﻿using System;
+﻿using HotelReservation.Core.Repository.Interface;
+using HotelReservation.Domain.Model;
 using System.Collections.Generic;
-using System.Text;
 
 namespace HotelReservation.Core.Repository.Service
 {
     public class HotelService
     {
+
+        private IHotelRepository hotelRepository;
+
+        public HotelService()
+        {
+            this.hotelRepository =new HotelRepository();
+        }
+
+
+        public Hotel GetHotel(string id)
+        {
+            return hotelRepository.GetHotel(identification : id);
+        }
+
+        public List<Hotel> GetHotels()
+        {
+            return hotelRepository.GetHotels();
+        }
+
     }
 }
