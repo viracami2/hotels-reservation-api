@@ -82,4 +82,7 @@
   <ItemGroup>
     <None Include="StoreProcedures\PostHotel.sql" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="StoreProcedures\GetHotels.sql" />
+  </ItemGroup>
 </Project>

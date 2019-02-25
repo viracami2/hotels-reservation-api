@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using HotelReservation.Core.Repository.Service;
+using HotelReservation.Domain.Model;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -11,12 +13,18 @@ namespace Hotel_Reservations.Controllers
     [ApiController]
     public class HotelController : ControllerBase
     {
-        
+        HotelService hotelService;
+
+        public HotelController()
+        {
+            this.hotelService = new HotelService();
+        }
+
         // GET: api/Hotel
         [HttpGet]
-        public IEnumerable<string> Get()
+        public IEnumerable<Hotel> Get()
         {
-            return new string[] { "value1", "value2" };
+            return this.hotelService.GetHotels();
         }
 
         // GET: api/Hotel/5

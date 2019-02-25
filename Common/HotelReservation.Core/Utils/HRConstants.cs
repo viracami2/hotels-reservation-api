@@ -9,5 +9,8 @@ namespace HotelReservation.Core.Utils
         public const string ExistUser = "Usuario ya existe";
         public const string NotExistUser = "Usuario no existe";
         public const string CreateUserFine= "Usuario Creado Exitoso";
+
+
+        public const string NotExistHotel = "Hotel no existe";
     }
 } 

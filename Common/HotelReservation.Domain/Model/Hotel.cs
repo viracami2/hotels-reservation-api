@@ -8,6 +8,16 @@ namespace HotelReservation.Domain.Model
     public class Hotel
     {
         
+        public Hotel(Hotel hotel)
+        {            
+            NumberIdentification = hotel.NumberIdentification;
+            HotelType = hotel.HotelType;
+            AddressLine = hotel.AddressLine;
+            Mail = hotel.Mail;
+        }
+
+        public Hotel(){}
+
         [Required]
         public string NumberIdentification { get; set; }
         [Required]

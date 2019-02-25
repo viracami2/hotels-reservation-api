@@ -44,15 +44,24 @@ namespace Tests
         {
             DatabaseService _service = new DatabaseService();
             TestContext.WriteLine(_service.HotelGet("110203")?.HotelName);
-
         }
+
+        [Category("Hotels")]
+        [TestCase(TestName = nameof(Should_Get_Hotels))]
+        public void Should_Get_Hotels()
+        {
+            DatabaseService _service = new DatabaseService();
+            var result= _service.Hotel_ListGet();
+            TestContext.WriteLine(result[0].HotelName);
+        }
+
 
         [Category("Hotels")]
         [TestCase(TestName = nameof(Should_Post_Hotel))]
         public void Should_Post_Hotel()
         {
             DatabaseService _service = new DatabaseService();
-            Hotel_Response hotelTest = new Hotel_Response() { NumberIdentification="110203", HotelName="Hotel Las Americas", HotelType = "Corporativo",AddressLine="la boquilla",Mail="lasAmericas@yopmail.com" };
+            Hotel_Response hotelTest = new Hotel_Response() { NumberIdentification="110203", HotelName="Hote el caribe", HotelType = "Corporativo",AddressLine="la boquilla",Mail="lasAmericas@yopmail.com" };
             ;
             TestContext.WriteLine(_service.HotelPost(hotelTest));
 

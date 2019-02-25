@@ -30,6 +30,9 @@ namespace HotelReservation.Database.Service
 
         #region Hoteles
 
+        public List<Hotel_Response> Hotel_ListGet()
+            => Connection().Query<Hotel_Response>(sql: "GetHotels").ToList();
+
         public Hotel_Response HotelGet(string id)
             => Connection().Query<Hotel_Response>(sql: "GetHotel", parameters: new { id }).FirstOrDefault();
 
