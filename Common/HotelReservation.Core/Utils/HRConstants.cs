@@ -12,5 +12,6 @@ namespace HotelReservation.Core.Utils
 
 
         public const string NotExistHotel = "Hotel no existe";
+        public const string ExistHotel   = "Hotel ya existe";
     }
 } 

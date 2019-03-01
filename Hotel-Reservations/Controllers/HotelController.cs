@@ -29,9 +29,9 @@ namespace Hotel_Reservations.Controllers
 
         // GET: api/Hotel/5
         [HttpGet("{id}", Name = "Get")]
-        public string Get(int id)
+        public Hotel Get(string id)
         {
-            return "value";
+            return this.hotelService.GetHotel(id);
         }
 
         // POST: api/Hotel

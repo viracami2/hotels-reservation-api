@@ -2,6 +2,7 @@
 using HotelReservation.Core.Repository.Service.Response;
 using HotelReservation.Core.Utils;
 using HotelReservation.Database.Service;
+using HotelReservation.Database.Service.Response;
 using HotelReservation.Domain.Model;
 using Newtonsoft.Json;
 using System;
@@ -50,7 +51,11 @@ namespace HotelReservation.Core.Repository
         }
 
         public Response PostHotel(Hotel hotel)
-        {
+        {            
+            if (string.IsNullOrEmpty(GetHotel(hotel.NumberIdentification)?.NumberIdentification))
+                throw new NullReferenceException($"[{nameof(PostHotel)}] - {HRConstants.ExistHotel}");
+            
+            this.dataService.HotelPost(JsonConvert.DeserializeObject<Hotel_Response>(JsonConvert.SerializeObject(hotel)));
             throw new NotImplementedException();
         }
     }
