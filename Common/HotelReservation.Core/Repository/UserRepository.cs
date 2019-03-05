@@ -60,7 +60,7 @@ namespace HotelReservation.Core.Repository
 
                 return new Response
                 {
-                    code = 200,
+                    Code = 200,
                     Content = HRConstants.CreateUserFine
                 };
             }

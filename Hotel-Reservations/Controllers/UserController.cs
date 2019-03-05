@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using HotelReservation.Core.Repository.Service;
 using HotelReservation.Core.Repository.Service.Response;
 using HotelReservation.Domain.Model;

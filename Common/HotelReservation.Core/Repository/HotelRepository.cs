@@ -55,8 +55,8 @@ namespace HotelReservation.Core.Repository
             if (string.IsNullOrEmpty(GetHotel(hotel.NumberIdentification)?.NumberIdentification))
                 throw new NullReferenceException($"[{nameof(PostHotel)}] - {HRConstants.ExistHotel}");
             
-            this.dataService.HotelPost(JsonConvert.DeserializeObject<Hotel_Response>(JsonConvert.SerializeObject(hotel)));
-            throw new NotImplementedException();
+            var response = this.dataService.HotelPost(JsonConvert.DeserializeObject<Hotel_Response>(JsonConvert.SerializeObject(hotel)));
+            return new Response {};
         }
     }
 }

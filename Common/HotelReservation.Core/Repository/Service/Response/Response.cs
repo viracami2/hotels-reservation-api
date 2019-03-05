@@ -6,7 +6,7 @@ namespace HotelReservation.Core.Repository.Service.Response
 {
     public class Response
     {
-        public int code { get; set; }
+        public int Code { get; set; }       
         public string Content { get; set; }
     }
 }
