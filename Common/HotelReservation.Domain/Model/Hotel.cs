@@ -14,12 +14,15 @@ namespace HotelReservation.Domain.Model
             HotelType = hotel.HotelType;
             AddressLine = hotel.AddressLine;
             Mail = hotel.Mail;
+            HotelName = hotel.HotelName;
         }
 
         public Hotel(){}
 
         [Required]
         public string NumberIdentification { get; set; }
+        [Required]
+        public string HotelName { get; set; }
         [Required]
         public string HotelType { get; set; }
         [Required]

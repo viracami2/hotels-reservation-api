@@ -36,8 +36,12 @@ namespace HotelReservation.Database.Service
         public Hotel_Response HotelGet(string id)
             => Connection().Query<Hotel_Response>(sql: "GetHotel", parameters: new { id }).FirstOrDefault();
 
-        public Hotel_Response HotelPost(Hotel_Response hotel )
-            => (Hotel_Response)Connection().Query<Hotel_Response>(sql:"PostHotel",parameters: hotel);
+        public ResponseDB HotelPost(Hotel_Response hotel )
+        {
+            var output = new ResponseDB();
+            var respone= Connection().Query(sql:"PostHotel",parameters: hotel,outputParameters: output);
+            return output;
+        }
         #endregion
     }
 }

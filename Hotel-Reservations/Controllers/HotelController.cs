@@ -1,11 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
+using System.Net.Http;
 using System.Threading.Tasks;
 using HotelReservation.Core.Repository.Service;
 using HotelReservation.Domain.Model;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 
 namespace Hotel_Reservations.Controllers
 {
@@ -36,8 +39,10 @@ namespace Hotel_Reservations.Controllers
 
         // POST: api/Hotel
         [HttpPost]
-        public void Post([FromBody] string value)
+        public ObjectResult Post([FromBody] Hotel hotel)
         {
+         var result= this.hotelService.PostHotel(hotel);
+            return StatusCode(200, result);
         }
 
         // PUT: api/Hotel/5

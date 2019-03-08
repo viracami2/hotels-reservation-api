@@ -63,7 +63,7 @@ namespace Tests
             DatabaseService _service = new DatabaseService();
             Hotel_Response hotelTest = new Hotel_Response() { NumberIdentification="110203", HotelName="Hote el caribe", HotelType = "Corporativo",AddressLine="la boquilla",Mail="lasAmericas@yopmail.com" };
             ;
-            TestContext.WriteLine(_service.HotelPost(hotelTest));
+            TestContext.WriteLine(_service.HotelPost(hotelTest).Content);
 
         }
 

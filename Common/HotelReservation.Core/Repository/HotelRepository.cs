@@ -24,15 +24,13 @@ namespace HotelReservation.Core.Repository
         public Hotel GetHotel(string identification)
         {
             var result = this.dataService.HotelGet(identification);
-            if (string.IsNullOrEmpty(result?.NumberIdentification))
-                throw new NullReferenceException($"[{nameof(GetHotel)}] {HRConstants.NotExistHotel}");
 
             return new Hotel
             {
-                NumberIdentification =result.NumberIdentification,
-                AddressLine          =result.AddressLine,
-                HotelType            =result.HotelType,
-                Mail                 =result.Mail
+                NumberIdentification =result?.NumberIdentification,
+                AddressLine          =result?.AddressLine,
+                HotelType            =result?.HotelType,
+                Mail                 =result?.Mail
             };
         }
 
@@ -41,22 +39,16 @@ namespace HotelReservation.Core.Repository
              var result = this.dataService.Hotel_ListGet();
 
             return result.Select( hotel => new Hotel(JsonConvert.DeserializeObject<Hotel>(JsonConvert.SerializeObject(hotel)))
-            //{
-            //    NumberIdentification=hotel.NumberIdentification,
-            //    AddressLine=hotel.AddressLine,
-            //    HotelType=hotel.HotelType,
-            //    Mail= hotel.Mail
-            //}
             ).ToList();            
         }
 
         public Response PostHotel(Hotel hotel)
         {            
-            if (string.IsNullOrEmpty(GetHotel(hotel.NumberIdentification)?.NumberIdentification))
+            if (!string.IsNullOrEmpty(GetHotel(hotel.NumberIdentification)?.NumberIdentification))
                 throw new NullReferenceException($"[{nameof(PostHotel)}] - {HRConstants.ExistHotel}");
             
             var response = this.dataService.HotelPost(JsonConvert.DeserializeObject<Hotel_Response>(JsonConvert.SerializeObject(hotel)));
-            return new Response {};
+            return  JsonConvert.DeserializeObject<Response>(JsonConvert.SerializeObject(response));
         }
     }
 }
